@@ -1,0 +1,250 @@
+@import "./normalize.css";
+
+:root {
+  --fontBase: "Poppins", sans-serif;
+  --headline1: bold 64px/87px var(--fontBase);
+  --headline2: bold 40px/54px var(--fontBase);
+  --headline3: 32px/43px var(--fontBase);
+  --headline4: 24px/32px var(--fontBase);
+  --blockquote: 22px/32px var(--fontBase);
+  --paragraph: 17px/24px var(--fontBase);
+  --white: #ffffff;
+  --line: #61616133;
+  --gray: #a5a3a5;
+  --body: #251f24;
+  --grayblack: #3a3539;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--body);
+}
+
+/* .header {
+} */
+.header-content {
+  padding-inline: 20px;
+}
+header {
+  margin-block-start: 25px;
+}
+header summary {
+  margin-block: 24px;
+}
+header ol,
+a {
+  color: var(--gray);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--white);
+}
+header li {
+  margin-block-end: 16px;
+}
+
+header p {
+  margin-block: 0;
+}
+.wrapper {
+  max-inline-size: 684px;
+  margin: auto;
+}
+.main-content {
+  padding-inline: 24px;
+}
+
+main img {
+  max-inline-size: 100%;
+}
+
+.poster {
+  background-image: linear-gradient(to top, rgba(20, 10, 41, 0.8), transparent),
+    url(../img/post.png);
+  height: 100px;
+}
+header,
+h1,
+h2,
+h3,
+h4 {
+  color: var(--white);
+}
+
+h1 {
+  font: var(--headline3);
+  margin-block-start: 64px;
+  margin-block-end: 20px;
+}
+h2 {
+  font: var(--headline3);
+  margin-block: 40px;
+}
+h3 {
+  font: var(--headline3);
+  font-weight: 400;
+  margin-block: 16px;
+}
+h4 {
+  font: var(--headline4);
+  font-weight: 200;
+}
+
+hr {
+  margin-block: 40px;
+  border-color: #61616133;
+}
+p {
+  font: var(--paragraph);
+  color: var(--gray);
+}
+
+li {
+  color: var(--gray);
+}
+
+.section-content img {
+  display: block;
+  margin-block-start: 40px;
+}
+
+body {
+  counter-reset: listTitle;
+}
+
+.section-content h3 {
+  counter-increment: listTitle;
+}
+
+.section-content h3::before {
+  content: counter(listTitle) ". ";
+}
+
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  background: var(--grayblack);
+  border-radius: 8px;
+  padding-inline: 24px;
+  padding-block: 24px;
+}
+
+blockquote p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font: var(--blockquote);
+  font-weight: 400;
+  color: var(--white);
+}
+blockquote p:nth-child(2)::before {
+  content: "- ";
+}
+pre {
+  background: var(--grayblack);
+  color: var(--white);
+  padding-inline: 40px;
+  padding-block: 40px;
+  font: var(--paragraph);
+  overflow: auto;
+  border-start-start-radius: 8px;
+  border-start-end-radius: 8px;
+  border-end-start-radius: 8px;
+  border-end-end-radius: 8px;
+  box-shadow: -10px 10px#ffffff8e;
+}
+
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slider-slide img {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+}
+.slider-bullet-list {
+  margin-block-start: 20px;
+  text-align: center;
+}
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid var(--white);
+  background: #251f24;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--gray);
+}
+
+.form input[type="submit"] {
+  background: #157efb;
+  border: none;
+}
+
+@media screen and (min-width: 1366px) {
+  .poster {
+    background-image: linear-gradient(
+        to top,
+        rgba(20, 10, 41, 0.8),
+        transparent
+      ),
+      url(../img/post.png);
+    height: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: 0;
+  }
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+  }
+  header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -220px;
+    inline-size: 197px;
+  }
+  header summary {
+    margin-block: 24px;
+  }
+  header li {
+    margin-block-end: 16px;
+  }
+
+  header p {
+    margin-block: 0;
+  }
+  h1 {
+    font: var(--headline1);
+  }
+  h2 {
+    font: var(--headline2);
+  }
+  h3 {
+    margin-block: 40px;
+  }
+}
